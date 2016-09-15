@@ -10,28 +10,28 @@ var dest = "assets/";
 var bower_path = "./bower_components";
 
 var sassPaths = [
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+    "bower_components/foundation-sites/scss",
+    "bower_components/motion-ui/src"
 ];
 
 var paths = {
-  'styles': 'src/scss/app.scss',
-  'js': "src/js/*.js",
-  'images': "src/images/**/*"
+    "styles": "src/scss/app.scss",
+    "js": ["src/js/lib/particles.js","src/js/app.js"],
+    "images": "src/images/**/*"
 };
 
-gulp.task('sass', function() {
-  return gulp.src(paths.styles)
-    .pipe(plugins.sass({
-      includePaths: sassPaths,
-      outputStyle: 'compressed' // if css compressed **file size**
-    })
-      .on('error', plugins.sass.logError))
-    .pipe(plugins.autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 9']
-    }))
-    .pipe(gulp.dest(dest + "css"))
-    .pipe(plugins.notify({ message: "SASS task complete" }));
+gulp.task("sass", function() {
+    return gulp.src(paths.styles)
+        .pipe(plugins.sass({
+                includePaths: sassPaths,
+                outputStyle: "compressed" // if css compressed **file size**
+            })
+            .on("error", plugins.sass.logError))
+        .pipe(plugins.autoprefixer({
+            browsers: ["last 2 versions", "ie >= 9"]
+        }))
+        .pipe(gulp.dest(dest + "css"))
+        .pipe(plugins.notify({ message: "SASS task complete" }));
 });
 
 gulp.task("scripts", function() {
@@ -40,7 +40,7 @@ gulp.task("scripts", function() {
         .pipe(plugins.jshint(".jshintrc"))
         .pipe(plugins.jshint.reporter("default"))
         .pipe(plugins.concat("main.js"))
-        .pipe(gulp.dest(dest + "js"))
+        // .pipe(gulp.dest(dest + "js"))
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.uglify())
         .pipe(gulp.dest(dest + "js"))
@@ -75,13 +75,13 @@ gulp.task("watch", function() {
     gulp.watch("src/scss/**/*.scss", ["sass"]);
 
     // Watch .js files
-    gulp.watch("src/scripts/**/*.js", ["scripts"]);
+    gulp.watch("src/js/**/*.js", ["scripts"]);
 
     // Watch image files
     gulp.watch("src/images/**/*", ["images"]);
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(plugins.ghPages());
-}); 
+gulp.task("deploy", function() {
+    return gulp.src("./dist/**/*")
+        .pipe(plugins.ghPages());
+});

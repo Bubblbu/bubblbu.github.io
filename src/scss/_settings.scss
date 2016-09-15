@@ -47,7 +47,6 @@
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
-// $global-width: 100%;
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #2199e8,
@@ -140,8 +139,9 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
+$anchor-color: $black;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color-hover: $primary-color;
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;

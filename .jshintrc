@@ -16,6 +16,7 @@
     "strict": true,
     "globals": {
         "$": true,
-        "window": true
+        "window": true,
+        "particleJS": true
     }
 }
