@@ -1,27 +1,43 @@
 {
-  "name": "foundation-sites-template",
+  "name": "bubblbu_github_page",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "First draft of my personal page.",
   "main": "gulpfile.js",
   "devDependencies": {
+    "del": "^2.2.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "main-bower-files": "^2.13.1"
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass"
+    "watch": "gulp watch",
+    "build": "gulp sass",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "git@github.com:Bubblbu/bubblbu.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/Bubblbu/bubblbu.github.io/issues",
+    "email": "asura.enkhbayar@gmail.com"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "Asura Enkhbayar <asura.enkhbayar@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
