@@ -2,7 +2,7 @@
 
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({
-    pattern: ["gulp-*", "gulp.*", "main-bower-files", "del"],
+    pattern: ["gulp-*", "gulp.*", "main-bower-files", "del", "smooth-scroll", "particles.js"],
     replaceString: /\bgulp[\-.]/
 });
 
