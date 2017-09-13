@@ -9,7 +9,7 @@
 
 #header {
     // height: 30vh;
-    margin-top: 20vh;
+    margin-top: 10vh;
     margin-bottom: 10vh;
 }
 
@@ -63,3 +63,16 @@
     padding-top: 45vh;
     padding-bottom: 50vh;
 }
+
+a {
+    color: blue;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+body {
+    font-size:20px
+}
+

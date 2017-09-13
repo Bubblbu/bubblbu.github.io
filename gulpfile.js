@@ -2,7 +2,7 @@
 
 var gulp = require("gulp");
 var plugins = require("gulp-load-plugins")({
-    pattern: ["gulp-*", "gulp.*", "main-bower-files", "del", "smooth-scroll", "particles.js"],
+    pattern: ["gulp-*", "gulp.*", "main-bower-files", "del"],
     replaceString: /\bgulp[\-.]/
 });
 
@@ -16,7 +16,7 @@ var sassPaths = [
 
 var paths = {
     "styles": "src/scss/app.scss",
-    "js": ["src/js/lib/particles.js","src/js/app.js"],
+    "js": ["src/js/lib/particles.min.js","src/js/app.js"],
     "images": "src/images/**/*"
 };
 
