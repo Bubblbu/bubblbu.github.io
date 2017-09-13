@@ -54,11 +54,13 @@ gulp.task("images", function() {
         .pipe(plugins.notify({ message: "Images task complete" }));
 });
 
-gulp.task("copy-index-html", function() {
-    gulp.src("./index.html")
+gulp.task("build", function() {
+    gulp.src(["index.html",
+              "particles.json"])
         // Perform minification tasks, etc here
-        .pipe(gulp.dest("./dist"))
-        .pipe(plugins.notify({ message: "Copied index.html" }));
+        .pipe(gulp.dest("./dist"));
+    gulp.src("assets/**/*")
+        .pipe(gulp.dest("./dist/assets"));
 });
 
 gulp.task("clean", function() {
